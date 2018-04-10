@@ -1,0 +1,55 @@
+/*
+    Created on : Apr 10, 2018, 7:04:32 AM
+    Author     : hudhaifa
+*/
+.dataobject-page .dataobject-results .dataobject-item {
+  padding: 0;
+  margin-bottom: 26px;
+}
+.dataobject-page .dataobject-results .dataobject-item:hover {
+  background-color: #f6f6f6;
+}
+.dataobject-page .dataobject-results .dataobject-item > div {
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+.dataobject-page .dataobject-results .dataobject-item > div:hover {
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+  margin-bottom: 0;
+}
+.dataobject-page .dataobject-results .dataobject-item > div h3 {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+.dataobject-page .dataobject-results .dataobject-item > div .dataobject-url {
+  color: #006621;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.4;
+}
+.dataobject-page .dataobject-results .dataobject-item > div .dataobject-content,
+.dataobject-page .dataobject-results .dataobject-item > div .dataobject-info,
+.dataobject-page .dataobject-results .dataobject-item > div .dataobject-title,
+.dataobject-page .dataobject-results .dataobject-item > div p {
+  color: #545454;
+  font-size: small;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 16px;
+  margin: 0;
+}
+.dataobject-page .dataobject-results .dataobject-item > div a:hover {
+  text-decoration: none;
+}
+.dataobject-page .dataobject-results .dataobject-item > div .content {
+  padding: 0;
+  margin: 0;
+}
+/*# sourceMappingURL=dataresult.css.map */

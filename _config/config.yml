@@ -1,0 +1,13 @@
+---
+Name: dataobject-searcher
+After:
+  - 'dataobject-manager/*'
+---
+
+DataObjectPage_Controller:
+  extensions:
+    - DefaultSearchFormExtension
+
+DefaultSearchPage_Controller:
+  extensions:
+    - DefaultSearchFormExtension

@@ -1,0 +1,25 @@
+{
+    "name": "hudhaifas/silverstripe-dataobject-searcher",
+    "description": "Search on all DataObjectPage's.",
+    "type": "silverstripe-module",
+    "homepage": "https://github.com/hudhaifas/silverstripe-dataobject-manager",
+    "keywords": ["silverstripe", "dataobject", "page", "search"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hudhaifa Shatnawi",
+            "email": "me@hudhaifa.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/hudhaifas/silverstripe-dataobject-searcher/issues"
+    },
+    "require": {
+        "silverstripe/cms": "~3.0",
+        "silverstripe/framework": "~3.0",
+        "hudhaifas/silverstripe-dataobject-manager": "dev-master"
+    },
+    "extra": {
+        "installer-name": "dataobject-searcher"
+    }
+}

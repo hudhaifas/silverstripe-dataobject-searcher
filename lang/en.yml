@@ -1,0 +1,43 @@
+en:
+  DataObjectPage:
+    PAGE_LENGTH: 'Page Length'
+    FB_APP_ID: 'Facebook App ID'
+    TWITTER_SITE: 'Twitter Site'
+    DEFAULT_SOCIAL_DESC: 'Default Social Description'
+    DEFAULT_SOCIAL_IMAGE: 'Default Social Image'
+    
+    KEYWORDS: 'Keywords'
+    MORE_ABOUT: 'More'
+    ALSO_SEE: 'Also See'
+    CHANGE: 'Change'
+    PREVIOUS: 'Previous'
+    NEXT: 'Next'
+    SAVE: 'Save'
+    DELETE: 'Delete'
+    SHOW: 'Show'
+    EDIT: 'Edit'
+    CANCEL: 'Cancel'
+    SEARCH: 'Search'
+    SEARCH_NO_RESULTS: 'Sorry, your search query did not return any results.'
+    SEARCH_RESULTS_COUNT: 'About {value} results'
+    SEARCH_RESULTS_1: 'About'
+    SEARCH_RESULTS_2: 'results'
+    COMMA: ','
+    
+  DataObjectExtension:
+    CREATED_BY: 'Created By'
+    EDITED_BY: 'Edited By'
+
+    # Privacy
+    PRIVACY: 'Privacy'
+    CAN_VIEW_TYPE: 'Who can view this location?'
+    VIEWER_GROUPS: 'Viewer Groups'
+    VIEWER_MEMBERS: 'Viewer Users'
+    CAN_EDIT_TYPE: 'Who can edit this location?'
+    EDITOR_GROUPS: 'Editor Groups'
+    EDITOR_MEMBERS: 'Editor Users'
+    GROUP_PLACEHOLDER: 'Click to select group'
+    MEMBER_PLACEHOLDER: 'Click to select user'
+    ACCESSANYONE: 'Anyone'
+    ACCESSLOGGEDIN: 'All Logged-in users'
+    ACCESSONLYTHESE: 'Only these people (choose from list)'
