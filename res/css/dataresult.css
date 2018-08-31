@@ -20,6 +20,8 @@
   background-color: transparent;
   box-shadow: none !important;
   padding: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 .dataobject-page .dataobject-results .dataobject-item > div:hover {
   background-color: transparent;
