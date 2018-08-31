@@ -1,7 +1,7 @@
 {
     "name": "hudhaifas/silverstripe-dataobject-searcher",
     "description": "Search on all DataObjectPage's.",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "homepage": "https://github.com/hudhaifas/silverstripe-dataobject-manager",
     "keywords": ["silverstripe", "dataobject", "page", "search"],
     "license": "MIT",
