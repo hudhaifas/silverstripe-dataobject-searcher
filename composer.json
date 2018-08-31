@@ -21,6 +21,9 @@
         "hudhaifas/silverstripe-dataobject-manager": "4.*"
     },
     "extra": {
-        "installer-name": "dataobject-searcher"
+        "installer-name": "dataobject-searcher",
+        "expose": [
+            "res/css"
+        ]
     }
 }
