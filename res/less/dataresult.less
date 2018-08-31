@@ -19,7 +19,7 @@
             > div {               
                 border: 0;
                 background-color: transparent;
-                box-shadow: none;
+                box-shadow: none !important;
                 padding: 0;
 
                 &:hover {
@@ -33,6 +33,11 @@
                     font-size: 18px;
                     font-weight: normal;
                     line-height: 1.2;
+                    display: block;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    -webkit-text-overflow: ellipsis;
+                    white-space: nowrap;
                     margin-bottom: 3px;
                 }
 
