@@ -33,8 +33,4 @@ class DefaultSearchFormExtension
         }
     }
 
-    public function isSearchable() {
-        return true;
-    }
-
 }
