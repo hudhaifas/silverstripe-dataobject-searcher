@@ -56,7 +56,7 @@ class DefaultSearchPageController
         }
 
         $paginated = PaginatedList::create(
-                        $results, $request
+                        $results->sort('NumView DESC'), $request
                 )->setPageLength(36)
                 ->setPaginationGetVar('s');
 
