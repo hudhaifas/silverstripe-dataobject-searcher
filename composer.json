@@ -15,9 +15,10 @@
         "issues": "https://github.com/hudhaifas/silverstripe-dataobject-searcher/issues"
     },
     "require": {
-        "silverstripe/cms": "~3.0",
-        "silverstripe/framework": "~3.0",
-        "hudhaifas/silverstripe-dataobject-manager": "dev-master"
+        "silverstripe/framework": "^4",
+        "silverstripe/cms": "^4",
+        "silverstripe/vendor-plugin": "^1.0",
+        "hudhaifas/silverstripe-dataobject-manager": "4.*"
     },
     "extra": {
         "installer-name": "dataobject-searcher"
