@@ -19,14 +19,13 @@ class DefaultSearchFormExtension
             $form = new Form(
                     $this->owner, //
                     'DefaultSearchForm', //
-                    new FieldList(new TextField('Search', 'Search')), //
+                    new FieldList(new TextField('q', '')), //
                     new FieldList(new FormAction('doSearch', 'Go'))
             );
 
             $form->setFormMethod('GET');
             $form->setFormAction($page->Link());
             $form->disableSecurityToken();
-            $form->setTemplate('Form_DefaultSearch');
             $form->loadDataFrom($_GET);
 
             return $form;

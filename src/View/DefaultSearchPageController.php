@@ -41,7 +41,7 @@ class DefaultSearchPageController
         $pages = DataObjectPage::get();
         $results = ArrayList::create(array());
 
-        if ($query = $request->getVar('Search')) {
+        if ($query = $request->getVar('q')) {
             foreach ($pages as $page) {
                 $controller = ModelAsController::controller_for($page);
                 if ($controller->isSearchable()) {

@@ -3,7 +3,9 @@
 <div>
     <cite class="dataobject-url">$ObjectLink</cite>
     <span class="dataobject-content">
-        <% if $ObjectSummary.Count >= 0 %>
+        <% if SocialDescription %>
+            <p>$SocialDescription</p>
+        <% else_if $ObjectSummary.Count >= 0 %>
             <% loop $ObjectSummary %>
                 <p><% if $Title %>$Title:<% end_if %> $Value.LimitWordCount(20).Plain</p>
             <% end_loop %>

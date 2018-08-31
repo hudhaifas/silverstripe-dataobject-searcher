@@ -2,8 +2,11 @@
     Created on : Apr 10, 2018, 7:04:32 AM
     Author     : hudhaifa
 */
-.sdlfkjsdf {
-  font-family: sans-serif;
+.dataobject-page .dataobject-page-header .control-label {
+  display: none;
+}
+.dataobject-page .dataobject-page-header .btn.action {
+  display: none;
 }
 .dataobject-page .dataobject-results .dataobject-item {
   padding: 0;
