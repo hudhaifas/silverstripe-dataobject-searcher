@@ -2,7 +2,7 @@
     <% if $ObjectImage %>
         <div class="thumbnail text-center col-sm-1 col-xs-1">
             <a href="$ObjectLink" title="$ObjectTitle" target="_blank">
-                <img src="$ObjectImage.Square(100,100).URL" alt="image" class="img-responsive" />
+                <img src="$ObjectImage.Square(100).URL" alt="image" class="img-responsive" />
             </a>
         </div>
         <div class="col-sm-11 col-xs-11">
