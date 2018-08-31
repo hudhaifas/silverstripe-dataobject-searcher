@@ -1,5 +1,5 @@
 <% if Results  %>
-    <div class="row dataobject-grid dataobject-results sdlfkjsdf">
+    <div class="row dataobject-grid dataobject-results">
         <% loop $Results %>
             <% if CanPublicView %>
                 <div class="col-sm-9 dataobject-item">
