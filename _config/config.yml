@@ -4,10 +4,6 @@ After:
   - 'dataobject-manager/*'
 ---
 
-DataObjectPageController:
-  extensions:
-    - DefaultSearchFormExtension
-
-DefaultSearchPageController:
+PageController:
   extensions:
     - DefaultSearchFormExtension
