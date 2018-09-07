@@ -30,7 +30,7 @@ class DOMSearchEngine
             }
         }
 
-        $start = isset($data['start']) ? (int) $data['start'] : 0;
+        $start = isset($data['s']) ? (int) $data['start'] : 0;
         $size = $resultPage->ResultsPerPage;
         $count = $results->count();
 
