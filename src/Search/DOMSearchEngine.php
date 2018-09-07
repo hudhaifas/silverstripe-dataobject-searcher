@@ -30,7 +30,7 @@ class DOMSearchEngine
             }
         }
 
-        $start = isset($data['s']) ? (int) $data['start'] : 0;
+        $start = isset($data['start']) ? (int) $data['start'] : 0;
         $size = $resultPage->ResultsPerPage;
         $count = $results->count();
 
@@ -39,8 +39,7 @@ class DOMSearchEngine
                 )
                 ->setPageLength($size)
                 ->setPageStart($start)
-                ->setTotalItems($count)
-                ->setPaginationGetVar('s');
+                ->setTotalItems($count);
 
         return [
             'Title' => _t('DOMSearchEngine.SEARCH_RESULTS', 'Search Results'),
