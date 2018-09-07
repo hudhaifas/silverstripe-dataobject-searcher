@@ -2,6 +2,7 @@
 
 namespace HudhaifaS\DOM\Search;
 
+use SilverStripe\Control\Director;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\View\Requirements;
