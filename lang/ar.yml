@@ -6,6 +6,3 @@ ar:
     SEARCH_RESULTS_1: 'حوالي'
     SEARCH_RESULTS_2: 'نتيجة'
     COMMA: '،'
-
-  EXTENSIBLE_SEARCH:
-    SEARCH_RESULTS: 'نتائج البحث'

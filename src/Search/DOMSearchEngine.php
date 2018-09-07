@@ -42,7 +42,6 @@ class DOMSearchEngine
                 ->setTotalItems($count);
 
         return [
-            'Title' => _t('DOMSearchEngine.SEARCH_RESULTS', 'Search Results'),
             'Query' => $form->getSearchQuery(),
             'Results' => $paginated,
             'Count' => $count
