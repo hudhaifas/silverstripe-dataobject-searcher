@@ -1,43 +1,8 @@
 ar:
-  DataObjectPage:
-    PAGE_LENGTH: 'حجم الصفحة'
-    FB_APP_ID: 'رقم برنامج فيسبوك'
-    TWITTER_SITE: 'صفحة تويتر'
-    DEFAULT_SOCIAL_DESC: 'الوصف الإجتماعي'
-    DEFAULT_SOCIAL_IMAGE: 'الصورة الإجتماعية'
-
-    KEYWORDS: 'الكلمات الدلالية'
-    MORE_ABOUT: 'المزيد'
-    ALSO_SEE: 'انظر أيضا'
-    CHANGE: 'تغيير'
-    PREVIOUS: 'السابق'
-    NEXT: 'التالي'
-    SAVE: 'حفظ'
-    DELETE: 'حذف'
-    SHOW: 'عرض'
-    EDIT: 'تعديل'
-    CANCEL: 'إلغاء'
+  DOMSearchEngine:
     SEARCH: 'بحث'
     SEARCH_NO_RESULTS: 'عذرا، لا يوجد أي نتائج للاستعلام الذي قمت به'
     SEARCH_RESULTS_COUNT: 'حوالي {value} نتيجة'
     SEARCH_RESULTS_1: 'حوالي'
     SEARCH_RESULTS_2: 'نتيجة'
     COMMA: '،'
-
-  DataObjectExtension:
-    CREATED_BY: 'أنشأ بواسطة'
-    EDITED_BY: 'آخر تغديل بواسطة'
-
-    # Privacy
-    PRIVACY: 'الخصوصية'
-    CAN_VIEW_TYPE: 'من يستطيع الاتطلاع هذا المكان؟'
-    VIEWER_GROUPS: 'مجموعات الزوار'
-    VIEWER_MEMBERS: 'الأعضاء الزوار'
-    CAN_EDIT_TYPE: 'من يستطيع تعديل هذا المكان؟'
-    EDITOR_GROUPS: 'مجموعات المحررين'
-    EDITOR_MEMBERS: 'الأعضاء المحررين'
-    GROUP_PLACEHOLDER: 'انقر لاختيار المجموعات'
-    MEMBER_PLACEHOLDER: 'انقر لاختيار الأعضاء'
-    ACCESSANYONE: 'الجميع'
-    ACCESSLOGGEDIN: 'كل الأعضاء المسجلين'
-    ACCESSONLYTHESE: ' فقط هؤلاء الأشخاص ( اختر من القائمة)'

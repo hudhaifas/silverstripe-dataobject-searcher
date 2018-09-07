@@ -4,6 +4,16 @@ After:
   - 'dataobject-manager/*'
 ---
 
+nglasl\extensible\ExtensibleSearchPage:
+  custom_search_engines:
+    HudhaifaS\DOM\Search\DOMSearchEngine: 'DOM'
+
+nglasl\extensible\ExtensibleSearchPageController:
+  extensions:
+    - 'HudhaifaS\DOM\Search\DOMSearchSearchFormExtention'
+
 PageController:
   extensions:
-    - DefaultSearchFormExtension
+    - 'nglasl\extensible\ExtensibleSearchExtension'
+    - 'HudhaifaS\DOM\Search\DOMSearchEngineExtension'
+
