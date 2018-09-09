@@ -10,7 +10,7 @@ nglasl\extensible\ExtensibleSearchPage:
 
 nglasl\extensible\ExtensibleSearchPageController:
   extensions:
-    - 'HudhaifaS\DOM\Search\DOMSearchSearchFormExtention'
+    - 'HudhaifaS\DOM\Search\DOMSearchFormExtention'
 
 PageController:
   extensions:
