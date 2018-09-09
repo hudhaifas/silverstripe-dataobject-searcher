@@ -15,10 +15,7 @@ class DOMSearchFormExtention
     public function updateExtensibleSearchSearchForm($form) {
         if ($form) {
             
-            if(!$this->data()->StartWithListing) {
-                $this->data()->StartWithListing = 1;
-                $this->data()->write();
-            }
+            // requires StartWithListing to be enabled
             $form->setFormAction($this->owner->Link());
 
             // Replace the search title with a placeholder.
