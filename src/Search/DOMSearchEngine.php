@@ -79,14 +79,12 @@ class DOMSearchEngine
         $query = $list->dataQuery()->query();
         $query->setFrom($sqlTable);
         $query->setSelect($select);
-
-        $totalCount = $query->unlimitedRowCount();
-        
         $query->setOrderBy($sortBy);
         $query->setLimit($pageLength, $start);
 
+        $totalCount = $query->unlimitedRowCount();
+        
         $records = $query->execute();
-
         $objects = [];
 
         foreach ($records as $record) {
