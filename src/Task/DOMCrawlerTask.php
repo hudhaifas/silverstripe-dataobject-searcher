@@ -32,8 +32,6 @@ class DOMCrawlerTask
     }
 
     public function exec($request) {
-        $configuration = Config::inst();
-//        $classes = $configuration->get(DOMSearchEngine::class, 'searchable_classes');
         $classes = $this->getSearchableClasses();
 
         foreach ($classes as $class) {
