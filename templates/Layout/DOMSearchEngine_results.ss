@@ -6,7 +6,7 @@
             </div>
 
             <div class="col-md-12">
-                <sub><%t DOMSearchEngine.SEARCH_RESULTS_COUNT 'About {value} results' value=$Results.Count%></sub>
+                <sub><%t DOMSearchEngine.SEARCH_RESULTS_COUNT 'About {value} results' value=$Results.TotalItems%></sub>
             </div>
         </div>
     </div>

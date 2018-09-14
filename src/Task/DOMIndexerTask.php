@@ -23,7 +23,7 @@ class DOMIndexerTask
         foreach ($crawledObjects as $crawled) {
             $indexed = $this->getIndexed($crawled);
             $this->indexObject($crawled->getRecordObject(), $indexed);
-            
+
             $crawled->delete();
         }
     }
@@ -34,6 +34,7 @@ class DOMIndexerTask
 
         $indexed->RecordLink = $object->getObjectLink();
         $indexed->RecordTitle = $object->getObjectTitle();
+        $indexed->RecordDescription = $this->removeNewlines($object->getSocialDescription());
         $indexed->RecordContent = $this->removeNewlines($object->getSearchableContent());
         $image = $object->getObjectImage();
         if ($image) {
@@ -58,14 +59,10 @@ class DOMIndexerTask
     }
 
     public function removeNewlines($string) {
-//        $string = preg_replace('/\s\s+/', ' ', $string);
-//        $string = str_replace("  ", " ", $string);
-//        return trim($string);
-//        return trim(preg_replace('/\s\s+/', ' ', $string));
-        $string = trim(preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $string));
+        $string = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $string);
         $string = Convert::html2raw($string);
 
-        return $string;
+        return trim($string);
     }
 
 }

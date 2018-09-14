@@ -39,7 +39,7 @@ class DOMCrawlerTask
     }
 
     public function crawlClass($class) {
-        $objects = DataObject::get($class);
+        $objects = DataObject::get($class)->Limit(200);
 
         foreach ($objects as $object) {
             $crawled = $this->getCrawled($object);

@@ -17,11 +17,12 @@ class DOMIndexed
     private static $db = [
         'RecordID' => 'Int',
         'RecordClass' => 'Varchar(255)',
+        'RecordContent' => 'Text',
         'RecordLink' => 'Varchar(255)',
         'RecordTitle' => 'Varchar(255)',
         'RecordImageID' => 'Int',
         'RecordBreadcrumb' => 'Varchar(255)',
-        'RecordContent' => 'Text',
+        'RecordDescription' => 'Text',
         'RecordKeywords' => 'Text',
         'RecordRank' => 'Int',
     ];
@@ -29,6 +30,10 @@ class DOMIndexed
         'ObjectUniquePerIndex' => [
             'type' => 'unique',
             'columns' => ['RecordLink'],
+        ],
+        'ObjectFulltextPerIndex' => [
+            'type' => 'fulltext',
+            'columns' => ['RecordTitle', 'RecordContent'],
         ]
     ];
     private static $create_table_options = [
