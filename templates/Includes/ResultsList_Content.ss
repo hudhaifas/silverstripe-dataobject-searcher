@@ -1,16 +1,8 @@
-<h3><a href="$ObjectLink" title="$ObjectTitle" target="_blank">$ObjectTitle</a></h3>
+<h3><a href="$RecordLink" title="$RecordTitle" target="_blank">$RecordTitle</a></h3>
 
 <div>
-    <cite class="dataobject-url">$ObjectLink</cite>
+    <cite class="dataobject-url">$RecordLink</cite>
     <span class="dataobject-content">
-        <% if SocialDescription %>
-            <p>$SocialDescription</p>
-        <% else_if $ObjectSummary.Count >= 0 %>
-            <% loop $ObjectSummary %>
-                <p><% if $Title %>$Title:<% end_if %> $Value.LimitWordCount(20).Plain</p>
-            <% end_loop %>
-        <% else %>
-            $ObjectSummary
-        <% end_if %>    
+        <p>$RecordContent.LimitWordCount(50).Plain</p>
     </span>
 </div>

@@ -4,8 +4,8 @@ namespace HudhaifaS\DOM\Search;
 
 use DataObjectPage;
 use nglasl\extensible\CustomSearchEngine;
-use SilverStripe\CMS\Controllers\ModelAsController;
 use SilverStripe\ORM\ArrayList;
+use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\PaginatedList;
 
 /**
@@ -17,17 +17,13 @@ class DOMSearchEngine
         extends CustomSearchEngine {
 
     public function getSearchResults($data = null, $form = null, $resultPage = null) {
-        $pages = DataObjectPage::get();
-        $results = ArrayList::create(array());
+        $results = ArrayList::create([]);
 
         if ($data['Search']) {
-            foreach ($pages as $page) {
-                $controller = ModelAsController::controller_for($page);
-                if ($controller->isSearchable()) {
-                    $result = $controller->getObjectsList();
-                    $results->merge($controller->searchObjects($result, $data['Search']));
-                }
-            }
+            $results = DataObject::get(DOMIndexed::class)->filterAny([
+                'RecordTitle:PartialMatch' => $data['Search'],
+                'RecordContent:PartialMatch' => $data['Search'],
+            ]);
         }
 
         $start = isset($data['start']) ? (int) $data['start'] : 0;

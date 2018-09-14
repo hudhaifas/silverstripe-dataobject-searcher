@@ -1,8 +1,8 @@
 <div class="row" style="height: auto;">
-    <% if $ObjectImage %>
+    <% if $RecordImage %>
         <div class="thumbnail text-center col-sm-1 col-xs-1">
-            <a href="$ObjectLink" title="$ObjectTitle" target="_blank">
-                <img src="$ObjectImage.Square(64).URL" alt="image" class="img-responsive" />
+            <a href="$RecordLink" title="$RecordTitle" target="_blank">
+                <img src="$RecordImage.Square(64).URL" alt="image" class="img-responsive" />
             </a>
         </div>
         <div class="col-sm-11 col-xs-11">
