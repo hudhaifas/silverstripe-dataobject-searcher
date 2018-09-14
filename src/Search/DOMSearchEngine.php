@@ -35,8 +35,6 @@ class DOMSearchEngine
 
         $list = $this->searchEngine($keywords, $start, $pageLength);
 
-        $list->setLimitItems(false);
-
         return [
             'Query' => $form->getSearchQuery(),
             'Results' => $list,
