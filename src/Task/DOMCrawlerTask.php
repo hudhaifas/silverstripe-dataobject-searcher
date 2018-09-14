@@ -3,7 +3,6 @@
 namespace HudhaifaS\DOM\Search;
 
 use ReflectionClass;
-use SilverStripe\Core\Config\Config;
 use SilverStripe\Dev\BuildTask;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Security\DefaultAdminService;
