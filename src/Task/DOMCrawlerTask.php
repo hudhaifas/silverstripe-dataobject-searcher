@@ -79,8 +79,9 @@ class DOMCrawlerTask
         $searchable = array();
         foreach ($classes as $clazz) {
             $reflect = new ReflectionClass($clazz);
-            if ($reflect->implementsInterface(DOMSearchable::class))
+            if ($reflect->implementsInterface(DOMSearchable::class)) {
                 $searchable[] = $clazz;
+            }
         }
 
         return $searchable;
