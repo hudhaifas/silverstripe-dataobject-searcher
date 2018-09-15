@@ -3,6 +3,6 @@
 <div>
     <cite class="dataobject-url">$RecordLink</cite>
     <span class="dataobject-content">
-        <p>$RecordContent.LimitWordCount(50).Plain</p>
+        <p>$RecordDescription.LimitWordCount(50).Plain</p>
     </span>
 </div>
