@@ -29,7 +29,7 @@ class DOMIndexed
     private static $indexes = [
         'ObjectUniquePerIndex' => [
             'type' => 'unique',
-            'columns' => ['RecordLink'],
+            'columns' => ['RecordID', 'RecordClass'],
         ],
         'ObjectFulltextPerIndex' => [
             'type' => 'fulltext',
