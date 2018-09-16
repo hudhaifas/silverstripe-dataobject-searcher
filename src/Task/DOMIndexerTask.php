@@ -33,7 +33,7 @@ class DOMIndexerTask
 
         $indexed->RecordLink = $object->getObjectLink();
         $indexed->RecordTitle = $object->getObjectTitle();
-        $indexed->RecordDescription = DOMSearchHelper::remove_newlines($object->getSocialDescription());
+        $indexed->RecordDescription = DOMSearchHelper::remove_newlines($object->getObjectDescription());
         $indexed->RecordContent = DOMSearchHelper::remove_newlines($object->getAllLocalizedContent());
         $image = $object->getObjectImage();
         if ($image) {

@@ -65,7 +65,7 @@ class DOMIndexed
     }
 
     public function getLiveRecordDescription() {
-        return DOMSearchHelper::remove_newlines($this->getObject()->getSocialDescription());
+        return DOMSearchHelper::remove_newlines($this->getObject()->getObjectDescription());
     }
 
     public function increaseRank() {
