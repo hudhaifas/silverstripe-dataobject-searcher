@@ -60,6 +60,14 @@ class DOMIndexed
         }
     }
 
+    public function getLiveRecordTitle() {
+        return DOMSearchHelper::remove_newlines($this->getObject()->getObjectTitle());
+    }
+
+    public function getLiveRecordDescription() {
+        return DOMSearchHelper::remove_newlines($this->getObject()->getSocialDescription());
+    }
+
     public function increaseRank() {
         $this->RecordRank += 1;
         $this->write();
