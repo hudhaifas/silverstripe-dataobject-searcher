@@ -1,7 +1,7 @@
 <div class="row" style="height: auto;">
     <% if $RecordImage %>
         <div class="thumbnail text-center col-sm-1 col-xs-1">
-            <a href="$RecordLink" title="$RecordTitle" target="_blank">
+            <a href="$LiveRecordLink" title="$LiveRecordTitle" target="_blank">
                 <img src="$RecordImage.Square(64).URL" alt="image" class="img-responsive" />
             </a>
         </div>

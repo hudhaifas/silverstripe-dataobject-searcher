@@ -3,10 +3,7 @@
 namespace HudhaifaS\DOM\Search;
 
 use ReflectionClass;
-use SilverStripe\Dev\BuildTask;
 use SilverStripe\ORM\DataObject;
-use SilverStripe\Security\DefaultAdminService;
-use SilverStripe\Security\Member;
 
 /**
  *
@@ -14,34 +11,31 @@ use SilverStripe\Security\Member;
  * @version 1.0, Sep 7, 2018 - 11:31:56 PM
  */
 class DOMCrawlerTask
-        extends BuildTask {
+        extends DOMTask {
 
-    private static $admin_email = 'crawler';
     private static $segment = 'DOMCrawlerTask';
     protected $title = 'Crawl over all dataobjects';
     protected $description = 'Crawl over all dataobjects and collect content that can be used in search';
 
-    public function run($request) {
-        $service = DefaultAdminService::singleton();
-        $member = $service->findOrCreateAdmin($this->config()->admin_email);
-
-        Member::actAs($member, function() use($request) {
-            $this->exec($request);
-        });
-    }
-
     public function exec($request) {
         $classes = $this->getSearchableClasses();
+        $count = count($classes);
 
+        $this->println("Crawling $count class(es)");
         foreach ($classes as $class) {
+            $this->println("Crawling $class");
             $this->crawlClass($class);
         }
     }
 
     public function crawlClass($class) {
         $objects = DataObject::get($class);
+        $count = $objects->count();
 
-        foreach ($objects as $object) {
+        $this->println("Crawling $count object(s)");
+
+        foreach ($objects as $index => $object) {
+            $this->printProgress($index, $count);
             $crawled = $this->getCrawled($object);
             $this->crawlObject($object, $crawled);
         }

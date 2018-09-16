@@ -2,7 +2,6 @@
 
 namespace HudhaifaS\DOM\Search;
 
-use SilverStripe\Dev\BuildTask;
 use SilverStripe\ORM\DataObject;
 
 /**
@@ -11,15 +10,20 @@ use SilverStripe\ORM\DataObject;
  * @version 1.0, Sep 7, 2018 - 11:40:33 PM
  */
 class DOMIndexerTask
-        extends BuildTask {
+        extends DOMTask {
 
     private static $segment = 'DOMIndexerTask';
     protected $title = 'Index all craled content';
     protected $description = 'Index data collected by the Crawler task';
 
-    public function run($request) {
+    public function exec($request) {
         $crawledObjects = DOMCrawled::get();
-        foreach ($crawledObjects as $crawled) {
+        $count = $crawledObjects->count();
+        $this->println("Indexing $count record(s)");
+
+        foreach ($crawledObjects as $index => $crawled) {
+            $this->printProgress($index, $count);
+
             $indexed = $this->getIndexed($crawled);
             $this->indexObject($crawled->getRecordObject(), $indexed);
 
