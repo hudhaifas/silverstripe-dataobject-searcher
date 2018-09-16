@@ -17,3 +17,6 @@ PageController:
     - 'nglasl\extensible\ExtensibleSearchExtension'
     - 'HudhaifaS\DOM\Search\DOMSearchEngineExtension'
 
+SilverStripe\ORM\DataObject:
+  extensions:
+    - 'HudhaifaS\DOM\Search\DOMFluentExtension'

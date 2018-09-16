@@ -1,10 +1,8 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+namespace HudhaifaS\DOM\Search;
+
+use SilverStripe\Core\Convert;
 
 /**
  *
@@ -21,6 +19,13 @@ class DOMSearchHelper {
         }
 
         return true;
+    }
+
+    public static function remove_newlines($string) {
+        $string = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $string);
+        $string = Convert::html2raw($string);
+
+        return trim($string);
     }
 
 }

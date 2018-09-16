@@ -2,7 +2,6 @@
 
 namespace HudhaifaS\DOM\Search;
 
-use SilverStripe\Core\Convert;
 use SilverStripe\Dev\BuildTask;
 use SilverStripe\ORM\DataObject;
 
@@ -34,8 +33,8 @@ class DOMIndexerTask
 
         $indexed->RecordLink = $object->getObjectLink();
         $indexed->RecordTitle = $object->getObjectTitle();
-        $indexed->RecordDescription = $this->removeNewlines($object->getSocialDescription());
-        $indexed->RecordContent = $this->removeNewlines($object->getSearchableContent());
+        $indexed->RecordDescription = DOMSearchHelper::remove_newlines($object->getSocialDescription());
+        $indexed->RecordContent = DOMSearchHelper::remove_newlines($object->getAllLocalizedContent());
         $image = $object->getObjectImage();
         if ($image) {
             $indexed->RecordImageID = $object->getObjectImage()->ID;
@@ -56,13 +55,6 @@ class DOMIndexerTask
         }
 
         return $indexed;
-    }
-
-    public function removeNewlines($string) {
-        $string = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $string);
-        $string = Convert::html2raw($string);
-
-        return trim($string);
     }
 
 }
