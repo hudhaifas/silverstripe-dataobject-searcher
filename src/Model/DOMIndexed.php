@@ -64,6 +64,10 @@ class DOMIndexed
         return DOMSearchHelper::remove_newlines($this->getObject()->getObjectTitle());
     }
 
+    public function getLiveRecordLink() {
+        return DOMSearchHelper::remove_newlines($this->getObject()->getObjectLink());
+    }
+
     public function getLiveRecordDescription() {
         return DOMSearchHelper::remove_newlines($this->getObject()->getObjectDescription());
     }
