@@ -4,6 +4,7 @@ namespace HudhaifaS\DOM\Search;
 
 use nglasl\extensible\CustomSearchEngine;
 use SilverStripe\Control\Controller;
+use SilverStripe\Core\Convert;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\DataList;
 use SilverStripe\ORM\DataObject;
@@ -30,9 +31,14 @@ class DOMSearchEngine
         $start = $request->getVar('start') ? (int) $request->getVar('start') : 0;
         $pageLength = $resultPage->ResultsPerPage;
 
+        $booleanSearch = strpos($keywords, '"') !== false ||
+                strpos($keywords, '+') !== false ||
+                strpos($keywords, '-') !== false ||
+                strpos($keywords, '*') !== false;
+
         $startTime = microtime(true);
 
-        $list = $this->searchEngine($keywords, $start, $pageLength);
+        $list = $this->searchEngine($keywords, $start, $pageLength, "\"Relevance\" DESC", "", $booleanSearch);
 
         $searchTime = round(microtime(true) - $startTime, 5);
 
@@ -53,13 +59,17 @@ class DOMSearchEngine
      * @param type $booleanSearch
      * @return PaginatedList
      */
-    private function searchEngine($keywords, $start, $pageLength, $sortBy = "RecordRank DESC", $booleanSearch = false) {
+    private function searchEngine($keywords, $start, $pageLength, $sortBy = "Relevance DESC", $booleanSearch = false) {
         $boolean = '';
         if ($booleanSearch) {
             $boolean = "IN BOOLEAN MODE";
         }
 
         $match = "MATCH (RecordTitle, RecordContent) AGAINST ('$keywords' $boolean)";
+
+        // We make the relevance search by converting a boolean mode search into a normal one
+        $relevanceKeywords = str_replace(array('*', '+', '-'), '', $keywords);
+        $relevance = "MATCH (RecordTitle, RecordContent) AGAINST ('$relevanceKeywords') ";
 
         $list = DataList::create(DOMIndexed::class)->where($match);
         $sqlTable = '"' . DataObject::getSchema()->tableName(DOMIndexed::class) . '"';
@@ -74,7 +84,8 @@ class DOMSearchEngine
             'RecordBreadcrumb',
             'RecordDescription',
             'RecordKeywords',
-            'RecordRank'
+            'RecordRank',
+            "Relevance" => $relevance
         ];
 
         $query = $list->dataQuery()->query();
@@ -110,7 +121,7 @@ class DOMSearchEngine
     }
 
     public function escapeString($value) {
-        return $value;
+        return Convert::raw2sql($value);
     }
 
 }
