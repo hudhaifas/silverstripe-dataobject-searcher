@@ -2,8 +2,5 @@ en:
   DOMSearchEngine:
     SEARCH: 'Search'
     SEARCH_NO_RESULTS: 'Sorry, your search query did not return any results.'
-    SEARCH_RESULTS_COUNT: 'About {value} results'
-    SEARCH_RESULTS_1: 'About'
-    SEARCH_RESULTS_2: 'results'
-    COMMA: ','
+    SEARCH_RESULTS: 'About {value} results ({time} seconds)'
   

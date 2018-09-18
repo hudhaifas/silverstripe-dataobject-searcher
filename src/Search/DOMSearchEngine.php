@@ -18,8 +18,6 @@ class DOMSearchEngine
         extends CustomSearchEngine {
 
     public function getSearchResults($data = null, $form = null, $resultPage = null) {
-        $results = ArrayList::create([]);
-
         // hack to get the current request object
         $request = Controller::curr()->getRequest();
 
@@ -31,14 +29,17 @@ class DOMSearchEngine
 
         $start = $request->getVar('start') ? (int) $request->getVar('start') : 0;
         $pageLength = $resultPage->ResultsPerPage;
-        $count = $results->count();
+
+        $startTime = microtime(true);
 
         $list = $this->searchEngine($keywords, $start, $pageLength);
+
+        $searchTime = round(microtime(true) - $startTime, 5);
 
         return [
             'Query' => $form->getSearchQuery(),
             'Results' => $list,
-            'Count' => $count
+            'Time' => $searchTime,
         ];
     }
 
@@ -83,7 +84,7 @@ class DOMSearchEngine
         $query->setLimit($pageLength, $start);
 
         $totalCount = $query->unlimitedRowCount();
-        
+
         $records = $query->execute();
         $objects = [];
 

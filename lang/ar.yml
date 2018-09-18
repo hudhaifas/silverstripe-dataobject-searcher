@@ -2,7 +2,4 @@ ar:
   DOMSearchEngine:
     SEARCH: 'بحث'
     SEARCH_NO_RESULTS: 'عذرا، لا يوجد أي نتائج للاستعلام الذي قمت به'
-    SEARCH_RESULTS_COUNT: 'حوالي {value} نتيجة'
-    SEARCH_RESULTS_1: 'حوالي'
-    SEARCH_RESULTS_2: 'نتيجة'
-    COMMA: '،'
+    SEARCH_RESULTS: 'حوالي {value} نتيجة ({time} ثانية)'

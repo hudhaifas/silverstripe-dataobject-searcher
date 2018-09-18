@@ -1,0 +1,21 @@
+/*
+    Created on : Apr 10, 2018, 7:04:32 AM
+    Author     : hudhaifa
+*/
+.dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rb .rb-image {
+  float: right;
+}
+.dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rb .rb-content-with-image {
+  margin-left: auto;
+  margin-right: 72px;
+}
+@media only screen and (max-width: 767px) {
+  .dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rb .rb-image {
+    float: left;
+  }
+  .dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rb .rb-content-with-image {
+    margin-left: 76px;
+    margin-right: 0;
+  }
+}
+/*# sourceMappingURL=dataresult-rtl.css.map */

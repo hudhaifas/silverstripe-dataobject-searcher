@@ -24,6 +24,7 @@ class DOMSearchEngineExtension
 
         if ($this->owner->isRTL()) {
             Requirements::css("hudhaifas/silverstripe-dataobject-manager: res/css/dataobject-rtl.css");
+            Requirements::css("hudhaifas/silverstripe-dataobject-searcher: res/css/dataresult-rtl.css");
         }
 
         Requirements::javascript("hudhaifas/silverstripe-dataobject-manager: res/js/dataobject.manager.js");

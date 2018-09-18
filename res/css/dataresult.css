@@ -8,61 +8,86 @@
 .dataobject-page .dataobject-page-header .btn.action {
   display: none;
 }
-.dataobject-page .dataobject-results .dataobject-item {
+.dataobject-page .dataobject-page-content .dataobject-results .dataobject-item {
   padding: 0;
   margin-bottom: 26px;
 }
-.dataobject-page .dataobject-results .dataobject-item:hover {
+.dataobject-page .dataobject-page-content .dataobject-results .dataobject-item:hover {
   background-color: #f6f6f6;
 }
-.dataobject-page .dataobject-results .dataobject-item > div {
+.dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div {
   border: 0;
   background-color: transparent;
   box-shadow: none !important;
   padding: 0;
   margin-left: 0;
   margin-right: 0;
+  width: 80%;
 }
-.dataobject-page .dataobject-results .dataobject-item > div:hover {
+.dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div:hover {
   background-color: transparent;
   box-shadow: none;
   border: 0;
   margin-bottom: 0;
 }
-.dataobject-page .dataobject-results .dataobject-item > div h3 {
+.dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rh {
+  margin-bottom: 6px;
+}
+.dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rh a h3 {
+  display: block;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.2;
-  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-text-overflow: ellipsis;
   white-space: nowrap;
-  margin-bottom: 3px;
 }
-.dataobject-page .dataobject-results .dataobject-item > div .dataobject-url {
+.dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rh a .rh-url {
+  display: block;
   color: #006621;
   font-size: 14px;
   font-style: normal;
   font-weight: normal;
-  line-height: 1.4;
+  line-height: 1.2;
 }
-.dataobject-page .dataobject-results .dataobject-item > div .dataobject-content,
-.dataobject-page .dataobject-results .dataobject-item > div .dataobject-info,
-.dataobject-page .dataobject-results .dataobject-item > div .dataobject-title,
-.dataobject-page .dataobject-results .dataobject-item > div p {
-  color: #545454;
-  font-size: small;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 16px;
-  margin: 0;
-}
-.dataobject-page .dataobject-results .dataobject-item > div a:hover {
+.dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rb a:hover {
   text-decoration: none;
 }
-.dataobject-page .dataobject-results .dataobject-item > div .content {
-  padding: 0;
-  margin: 0;
+.dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rb .rb-image {
+  width: 64px;
+  height: 64px;
+  float: left;
+}
+.dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rb .rb-content-with-image {
+  margin-left: 72px;
+  font-size: 13px;
+}
+.dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rb .rb-content {
+  font-size: 13px;
+}
+@media only screen and (max-width: 767px) {
+  .dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div {
+    margin-left: 8px;
+    margin-right: 8px;
+    width: auto;
+  }
+  .dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rh a h3 {
+    font-size: 16px;
+  }
+  .dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rh a .rh-url {
+    font-size: 13px;
+  }
+  .dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rb .rb-image {
+    float: right;
+  }
+  .dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rb .rb-content-with-image {
+    font-size: 12px;
+    margin-left: 0;
+    margin-right: 76px;
+  }
+  .dataobject-page .dataobject-page-content .dataobject-results .dataobject-item > div .rb .rb-content {
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=dataresult.css.map */

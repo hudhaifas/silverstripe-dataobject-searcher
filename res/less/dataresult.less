@@ -6,7 +6,7 @@
 .dataobject-page {
     .dataobject-page-header {
         .control-label {
-            display: none;   
+            display: none;
         }
 
         .btn.action {
@@ -14,68 +14,132 @@
         }
     }
 
-    .dataobject-results {
-        .dataobject-item {
-            padding: 0;
-            margin-bottom: 26px;
-
-            &:hover {
-                background-color: #f6f6f6;
-            }
-
-            > div {               
-                border: 0;
-                background-color: transparent;
-                box-shadow: none !important;
+    .dataobject-page-content {
+        .dataobject-results {
+            .dataobject-item {
                 padding: 0;
-                margin-left: 0;
-                margin-right: 0;
-                
+                margin-bottom: 26px;
+
                 &:hover {
-                    background-color: transparent;
-                    box-shadow: none;
+                    background-color: #f6f6f6;
+                }
+
+                > div {
                     border: 0;
-                    margin-bottom: 0;
-                }
+                    background-color: transparent;
+                    box-shadow: none !important;
+                    padding: 0;
+                    margin-left: 0;
+                    margin-right: 0;
+                    width: 80%;
 
-                h3 {
-                    font-size: 18px;
-                    font-weight: normal;
-                    line-height: 1.2;
-                    display: block;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    -webkit-text-overflow: ellipsis;
-                    white-space: nowrap;
-                    margin-bottom: 3px;
-                }
-
-                .dataobject-url {
-                    color: #006621;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: normal;
-                    line-height: 1.4;
-                }
-
-                .dataobject-content, .dataobject-info, .dataobject-title, p {
-                    color: #545454;
-                    font-size: small;
-                    font-style: normal;
-                    font-weight: normal;
-                    line-height: 16px;
-                    margin: 0;
-                }
-
-                a {
                     &:hover {
-                        text-decoration: none;
+                        background-color: transparent;
+                        box-shadow: none;
+                        border: 0;
+                        margin-bottom: 0;
+                    }
+
+                    .rh {
+                        margin-bottom: 6px;
+
+                        a {
+                            h3 {
+                                display: block;
+                                font-size: 18px;
+                                font-weight: normal;
+                                line-height: 1.2;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                -webkit-text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+
+                            .rh-url {
+                                display: block;
+                                color: #006621;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: normal;
+                                line-height: 1.2;
+                            }
+                        }
+                    }
+
+                    .rb {
+                        a {
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+
+                        .rb-image {
+                            width: 64px;
+                            height: 64px;
+                            float: left;
+                        }
+
+                        .rb-content-with-image {
+                            margin-left: 72px;
+                            font-size: 13px;
+                        }
+
+                        .rb-content {
+                            font-size: 13px;
+                        }
                     }
                 }
+            }
+        }
+    }
+}
 
-                .content {
-                    padding: 0;
-                    margin: 0;
+@media only screen and (max-width: 767px) {
+    .dataobject-page {
+        .dataobject-page-header {
+            .control-label {
+            }
+
+            .btn.action {
+            }
+        }
+
+        .dataobject-page-content {
+            .dataobject-results {
+                .dataobject-item {
+                    > div {
+                        margin-left: 8px;
+                        margin-right: 8px;
+                        width: auto;
+
+                        .rh {
+                            a {
+                                h3 {
+                                    font-size: 16px;
+                                }
+
+                                .rh-url {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+
+                        .rb {
+                            .rb-image {
+                                float: right;
+                            }
+
+                            .rb-content-with-image {
+                                font-size: 12px;
+                                margin-left: 0;
+                                margin-right: 76px;
+                            }
+
+                            .rb-content {
+                                font-size: 12px;
+                            }
+                        }
+                    }
                 }
             }
         }
