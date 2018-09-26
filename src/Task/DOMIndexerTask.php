@@ -32,6 +32,10 @@ class DOMIndexerTask
     }
 
     public function indexObject($object, $indexed) {
+        if (!$object) {
+            $indexed->delete();
+        }
+
         $indexed->RecordID = $object->ID;
         $indexed->RecordClass = $object->ClassName;
 
