@@ -17,7 +17,7 @@ class DOMIndexerTask
     protected $description = 'Index data collected by the Crawler task';
 
     public function exec($request) {
-        $crawledObjects = DOMCrawled::get()->limit(500);
+        $crawledObjects = DOMCrawled::get()->limit(5000);
         $count = $crawledObjects->count();
         $this->println("Indexing $count record(s)");
 
