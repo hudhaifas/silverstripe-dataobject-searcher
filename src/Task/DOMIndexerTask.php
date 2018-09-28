@@ -33,7 +33,11 @@ class DOMIndexerTask
 
     public function indexObject($object, $indexed) {
         if (!$object) {
-            $indexed->delete();
+            if ($indexed) {
+                $indexed->delete();
+            }
+
+            return;
         }
 
         $indexed->RecordID = $object->ID;
