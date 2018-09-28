@@ -33,10 +33,7 @@ class DOMIndexerTask
 
     public function indexObject($object, $indexed) {
         if (!$object) {
-            if ($indexed) {
-                $indexed->delete();
-            }
-
+            $this->deleteIndexed($indexed);
             return;
         }
 
@@ -67,6 +64,14 @@ class DOMIndexerTask
         }
 
         return $indexed;
+    }
+
+    public function deleteIndexed($indexed) {
+        if (!$indexed || !$indexed->ID) {
+            return;
+        }
+
+        $indexed->delete();
     }
 
 }
