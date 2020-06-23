@@ -51,7 +51,7 @@ class DOMIndexed
     }
 
     public function CanPublicView() {
-        return $this->getObject()->CanPublicView();
+        return $this->getObject() && $this->getObject()->CanPublicView();
     }
 
     public function getRecordImage() {
