@@ -3,6 +3,7 @@
 namespace HudhaifaS\DOM\Search;
 
 use SilverStripe\Assets\Image;
+use SilverStripe\ORM\Connect\MySQLSchemaManager;
 use SilverStripe\ORM\DataObject;
 
 /**
@@ -36,9 +37,9 @@ class DOMIndexed
             'columns' => ['RecordTitle', 'RecordContent'],
         ]
     ];
-    private static $create_table_options = [
-        'MySQLDatabase' => 'ENGINE=MyISAM'
-    ];
+//    private static $create_table_options = [
+//        MySQLSchemaManager::ID => 'ENGINE=MyISAM'
+//    ];
     private static $default_sort = 'RecordRank DESC';
     private static $summary_fields = [
         'RecordTitle',

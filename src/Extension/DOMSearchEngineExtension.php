@@ -22,19 +22,12 @@ class DOMSearchEngineExtension
         Requirements::css("hudhaifas/silverstripe-dataobject-manager: res/css/dataobject.css");
         Requirements::css("hudhaifas/silverstripe-dataobject-searcher: res/css/dataresult.css");
 
-        if ($this->owner->isRTL()) {
+        if ($this->owner->hasMethod('isRTL') && $this->owner->isRTL()) {
             Requirements::css("hudhaifas/silverstripe-dataobject-manager: res/css/dataobject-rtl.css");
             Requirements::css("hudhaifas/silverstripe-dataobject-searcher: res/css/dataresult-rtl.css");
         }
 
         Requirements::javascript("hudhaifas/silverstripe-dataobject-manager: res/js/dataobject.manager.js");
-
-        if (isset($_GET['Search'])) {
-            $sanitized_search_text = filter_var($_GET['Search'], FILTER_SANITIZE_STRING);
-            $this->DefaultSearchText = DBField::create_field(
-                            'HTMLText', $sanitized_search_text
-            );
-        }
     }
 
     /// Search
